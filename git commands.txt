@@ -1,0 +1,393 @@
+
+puru@CDVM MINGW64 ~/Desktop
+$ git clone https://github.com/purshottam-Assudani/mydemo1.git
+Cloning into 'mydemo1'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+puru@CDVM MINGW64 ~/Desktop
+$ cd mydemo1
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git checkout dev
+error: pathspec 'dev' did not match any file(s) known to git
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git checkout -b dev
+Switched to a new branch 'dev'
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git init demo4
+Initialized empty Git repository in C:/Users/puru/Desktop/mydemo1/demo4/.git/
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git commit -m "hello"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'puru@CDVM.(none)')
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git config --global user.email "puru@gmail.com"
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git config --global user.name "puru"
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git commit -m "hello"
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo4/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git add .
+error: 'demo4/' does not have a commit checked out
+fatal: adding files failed
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git add .
+error: 'demo4/' does not have a commit checked out
+fatal: adding files failed
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ cd demo4
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1/demo4 (master)
+$ git add .
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1/demo4 (master)
+$ git commit -m "hello"
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1/demo4 (master)
+$ cd ..
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git commit -m hi"
+>
+>
+> ^C
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git commit -m hi"
+^C
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git commit -m "hi"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo4/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git add .
+error: 'demo4/' does not have a commit checked out
+fatal: adding files failed
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git add .
+error: 'demo4/' does not have a commit checked out
+fatal: adding files failed
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git add .
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git commit -m "hello"
+[main a49b9b1] hello
+ 1 file changed, 1 insertion(+)
+ create mode 100644 helllloooo.txt
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git push
+
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 275 bytes | 275.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/purshottam-Assudani/mydemo1.git
+   bd72ba4..a49b9b1  main -> main
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git push --set-upstream main dev
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git push --set-upstream mydemo1 dev
+fatal: 'mydemo1' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git push --set-upstream https://github.com/purshottam-Assudani/mydemo1.git devTotal 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/purshottam-Assudani/mydemo1/pull/new/dev
+remote:
+To https://github.com/purshottam-Assudani/mydemo1.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'https://github.com/purshottam-Assudani/mydemo1.git/dev'.
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git diff
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git diff --staged
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ gif diff main dev
+bash: gif: command not found
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git diff main dev
+diff --git a/helllloooo.txt b/helllloooo.txt
+deleted file mode 100644
+index aa5664a..0000000
+--- a/helllloooo.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-Hi Everyone
+\ No newline at end of file
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git diff
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git diff --staged
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git diff
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git diff --staged
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git add .
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git diff
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git diff --staged
+diff --git a/newme.txt b/newme.txt
+new file mode 100644
+index 0000000..29f8ad8
+--- /dev/null
++++ b/newme.txt
+@@ -0,0 +1 @@
++hello newbee
+\ No newline at end of file
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ gif diff main dev
+bash: gif: command not found
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git diff main dev
+diff --git a/helllloooo.txt b/helllloooo.txt
+deleted file mode 100644
+index aa5664a..0000000
+--- a/helllloooo.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-Hi Everyone
+\ No newline at end of file
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git commit -m "commited"
+[dev d40ab9d] commited
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newme.txt
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git diff main dev
+diff --git a/helllloooo.txt b/helllloooo.txt
+deleted file mode 100644
+index aa5664a..0000000
+--- a/helllloooo.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-Hi Everyone
+\ No newline at end of file
+diff --git a/newme.txt b/newme.txt
+new file mode 100644
+index 0000000..29f8ad8
+--- /dev/null
++++ b/newme.txt
+@@ -0,0 +1 @@
++hello newbee
+\ No newline at end of file
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git branch
+* dev
+  main
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git branch bugfix
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git branch
+  bugfix
+* dev
+  main
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git branch -d bugfix
+Deleted branch bugfix (was d40ab9d).
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git branch
+* dev
+  main
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git branch -d dev
+error: cannot delete branch 'dev' used by worktree at 'C:/Users/puru/Desktop/mydemo1'
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git branch -d main
+warning: deleting branch 'main' that has been merged to
+         'refs/remotes/origin/main', but not yet merged to HEAD
+Deleted branch main (was a49b9b1).
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git branch
+* dev
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git add .
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git commit -m "he"
+On branch dev
+nothing to commit, working tree clean
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 272 bytes | 272.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/purshottam-Assudani/mydemo1.git
+   bd72ba4..d40ab9d  dev -> dev
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git branch
+* dev
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (dev)
+$ git checkout main
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git branch
+  dev
+* main
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git branch -d dev
+error: the branch 'dev' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D dev'
+hint: Disable this message with "git config advice.forceDeleteBranch false"
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git branch -D dev
+Deleted branch dev (was d40ab9d).
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git branch
+* main
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git checkout dev
+error: pathspec 'dev' did not match any file(s) known to git
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git add .
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git commit -m "he"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$ git push
+Everything up-to-date
+
+puru@CDVM MINGW64 ~/Desktop/mydemo1 (main)
+$
